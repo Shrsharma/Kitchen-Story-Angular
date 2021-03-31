@@ -1,0 +1,42 @@
+<div class="sign">  
+    <img src="https://techcrunch.com/wp-content/uploads/2015/03/groceries-e1554037962210.jpg">
+    <form class="sign-form" [formGroup]="signupForm" (ngSubmit)="handleFormSubmit()">
+        <br>
+        <br>
+        <h3 style="font-family: Brush Script MT, Brush Script Std, cursive; text-align: center; color: whitesmoke;"> Add Items Form </h3>
+        <hr style="width:20%; margin-left:40%; border-width: 3px; border-color: whitesmoke;">
+        <label>
+             <h5>Product Id:</h5>
+            <input type="text"  formControlName="fName" placeholder="   product-id">
+            <br> 
+            <span *ngIf="formSubmitted && formControls.fName.errors">ProduvtID is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>Product Name: </h5>
+            <input type="text"  formControlName="lName" placeholder="   product-name">
+            <br>
+            <span *ngIf="formSubmitted && formControls.lName.errors">Product Name is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>Price: </h5>
+            <input type="text"  formControlName="lName" placeholder="   price">
+            <br>
+            <span *ngIf="formSubmitted && formControls.lName.errors">Price is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>Quantity: </h5>
+            <input type="text"  formControlName="lName" placeholder="   quantity">
+            <br>
+            <span *ngIf="formSubmitted && formControls.lName.errors">Quantity is required</span>
+        </label>
+        <br>
+        <label>
+            <button type="submit" name="submit">Add-Item</button>
+        </label>
+        <br><br>
+    </form>
+
+</div>

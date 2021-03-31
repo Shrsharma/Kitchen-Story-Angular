@@ -1,0 +1,32 @@
+.store1
+{
+    padding-left: 15px;
+}
+.store2
+{
+    padding-left: 15px;
+}
+.store3
+{
+    padding-left: 15px;
+}
+.store1 img{
+    width: 300px;
+    height: 280px;
+    
+}
+.store2 img{
+    width: 300px;
+    height: 280px;
+}
+.store3 img{
+    width: 300px;
+    height: 280px;
+}
+p{
+    text-align: center;
+}
+hr{
+    margin-left: 50px ;
+    margin-right: 50px;
+}

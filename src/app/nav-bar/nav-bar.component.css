@@ -1,0 +1,12 @@
+button{
+    background-color: transparent;
+    border: transparent;
+    color: rgb(107, 105, 105);
+}
+button:hover
+{
+    color: rgb(10, 223, 99);
+    border-radius: 10px;
+    background-color: transparent;
+    text-decoration: underline;
+}

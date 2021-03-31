@@ -1,0 +1,87 @@
+<br><br>
+
+<div class="container text-center">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="search-hero">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for a hero by id or name or country">
+      </div>
+      <table class="table ">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Product Name</th>
+          <th>Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of items | filter:searchText">
+          <td>{{item.id}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.price}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+
+          
+<br>
+
+<div class="cart1">
+    <div class="row">
+        <div class="col">
+        <div class="card">
+            <img class="card-img-top" src="https://post.healthline.com/wp-content/uploads/2020/09/Do_Apples_Affect_Diabetes_and_Blood_Sugar_Levels-732x549-thumbnail-1-732x549.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Apples</h5>
+            <p class="card-text">Price: 250/kg</p>
+            <button name="Submit" (click)="handleItem1($event)">Add Item</button>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img class="card-img-top" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/are-potatoes-healthy-1570222022.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Potatoes</h5>
+          <p class="card-text">Price: 30/kg</p>
+          <button name="Submit" (click)="handleItem2($event)">Add Item</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" >
+        <img class="card-img-top" src="https://www.e-fresco.io/pub/media/catalog/product/u/2/u21d2f12fc6a44ebca4ed87518c148325h.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Wheat</h5>
+          <p class="card-text">Price: 50/kg</p>
+          <button name="Submit" (click)="handleItem3($event)">Add Item</button>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<br>
+<div class="cart2" >
+
+    <h5 style="text-align: center;">Cart Items</h5>
+    <hr style="margin-left: 30px; margin-right: 30px;">
+    <div style="align-items: center;">
+    <ul class="list-unstyled ">
+        <li><input style="border-color: transparent;" [value]="total" /><br></li>
+        <li><input style="border-color: transparent;" [value]="prod1" /><br></li>
+        <li><input style="border-color: transparent;" [value]="prod2" /><br></li>
+        <li><input style="border-color: transparent;" [value]="prod3" /><br></li>
+    </ul>
+    </div>
+    
+    
+    
+    
+    <button name="Submit" type="submit" (click)="handleCart($event)">Cart Total</button>
+    
+</div>

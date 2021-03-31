@@ -1,0 +1,48 @@
+<div class="sign">  
+    <img src="https://techcrunch.com/wp-content/uploads/2015/03/groceries-e1554037962210.jpg">
+    <form class="sign-form" [formGroup]="signupForm" (ngSubmit)="handleFormSubmit()">
+        <br>
+        <br>
+        <h3 style="font-family: Brush Script MT, Brush Script Std, cursive; text-align: center; color: whitesmoke;"> Sign-Up Form </h3>
+        <hr style="width:20%; margin-left:40%; border-width: 3px; border-color: whitesmoke;">
+        <label>
+             <h5>FirstName:</h5>
+            <input type="text"  formControlName="fName" placeholder="   firstname">
+            <br> 
+            <span *ngIf="formSubmitted && formControls.fName.errors">FirstName is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>LastName: </h5>
+            <input type="text"  formControlName="lName" placeholder="   lastname">
+            <br>
+            <span *ngIf="formSubmitted && formControls.lName.errors">LastName is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>Email: </h5>
+            <input type="email"  formControlName="email" placeholder="   email">
+            <br>
+            <span *ngIf="formSubmitted && formControls.email.errors">Valid Email is required</span>
+        </label>
+        <br>
+        <label>
+            <h5>Password: </h5>
+            <input type="password" formControlName="password" placeholder="   password">
+            <br>
+            <span *ngIf="formSubmitted && formControls.password.errors">Valid Password is required</span>
+        </label>
+        <label>
+            <h5>Confirm Password: </h5>
+            <input type="password" formControlName="password" placeholder="   confirm password">
+            <br>
+            <span *ngIf="formSubmitted && formControls.password.errors">Valid Password is required</span>
+        </label>
+        <br>
+        <label>
+            <button type="submit" name="submit">Sign-Up</button>
+        </label>
+        <br><br>
+    </form>
+
+</div>
